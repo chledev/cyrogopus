@@ -1,0 +1,78 @@
+[package]
+name = "cyrogopus"
+version = "0.20.4"
+edition = "2024"
+
+[dependencies]
+unrar = { path = "../unrar-rs" }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["chrono"] }
+tracing-appender = "0.2.3"
+anyhow = { workspace = true }
+axum = { workspace = true }
+axum-server = { workspace = true }
+axum-extra = { workspace = true }
+bollard = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+utoipa = { workspace = true }
+utoipa-axum = { workspace = true }
+reqwest = { workspace = true }
+tokio = { workspace = true }
+colored = "3.0.0"
+chrono = { workspace = true }
+nestify = "0.3.3"
+rayon = "1.10.0"
+serde_yml = "0.0.12"
+serde_default = "0.2.0"
+users = "0.11.0"
+futures-util = { workspace = true }
+tokio-util = { workspace = true }
+uuid = { workspace = true }
+rand = { workspace = true }
+tar = "0.4.44"
+zip = { version = "5.1.1", default-features = false, features = ["bzip2", "deflate", "sha1", "time", "zstd", "lzma", "xz"] }
+sevenz-rust2 = { version = "0.19.0", features = ["deflate", "compress", "brotli", "zstd", "bzip2", "ppmd", "lz4"] }
+flate2 = { version = "1.1.1", features = ["zlib-rs"], default-features = false }
+jwt = "0.16.0"
+hmac = { version = "0.12.1", features = ["std"] }
+sha2 = "0.10.9"
+ddup-bak = "0.7.0"
+infer = "0.19.0"
+rustls = { version = "0.23.27", features = ["ring"] }
+ignore = { version = "0.4.23", features = ["simd-accel"] }
+sha1 = "0.10.6"
+futures = "0.3.31"
+russh = "0.54.0"
+russh-sftp = "2.1.1"
+md5 = "0.8.0"
+human_bytes = "0.4.3"
+ansi_term = "0.12.1"
+clap = "4.5.37"
+dialoguer = "0.12.0"
+libloading = "0.8.8"
+sysinfo = "0.37.0"
+crc32fast = "1.4.2"
+cap-std = "3.4.4"
+rustix = "1.0.7"
+cidr = { version = "0.3.1", features = ["serde"] }
+hickory-resolver = "0.25.2"
+constant_time_eq = "0.4.2"
+new_mime_guess = "4.0.4"
+async-trait = "0.1.88"
+content_disposition = "0.4.0"
+cron = { version = "0.15.0", features = ["serde"] }
+chrono-tz = "0.10.4"
+gzp = "1.0.1"
+lzma-rust2 = { version = "0.14.0", features = ["optimization"] }
+bzip2 = "0.6.0"
+lz4 = "1.28.1"
+zstd = { version = "0.13.3", features = ["zstdmt"] }
+base64 = "0.22.1"
+chunked_vec = "=0.3.4"
+
+[target.'cfg(target_os = "linux")'.dependencies]
+tikv-jemallocator = "0.6.0"
+
+[build-dependencies]
+serde_json = { workspace = true }
